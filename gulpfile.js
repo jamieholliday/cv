@@ -72,9 +72,7 @@
     });
 
     gulp.task('dist-styles', function() {
-        rimraf('./*.css', function(){
-            
-        });
+        rimraf('./*.css', function(){});
         gulp.src('app/main.scss')
         .pipe(sass({
             outputStyle: 'compressed'
