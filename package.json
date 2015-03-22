@@ -1,0 +1,30 @@
+{
+  "name": "cv",
+  "version": "0.0.2",
+  "description": "Jamie Holliday CV",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamieholliday/cv.git"
+  },
+  "author": "Jamie Holliday",
+  "bugs": {
+    "url": "https://github.com/jamieholliday/cv/issues"
+  },
+  "homepage": "https://employjamie.com",
+  "devDependencies": {
+    "gulp-sourcemaps": "~1.5.1",
+    "gulp-plumber": "~1.0.0",
+    "gulp": "~3.8.11",
+    "gulp-minify-html": "~1.0.1",
+    "gulp-sass": "~1.3.3",
+    "browser-sync": "~2.4.0",
+    "gulp-rev": "~3.0.1",
+    "connect-modrewrite": "~0.7.11",
+    "rimraf": "~2.3.2",
+    "gulp-rev-replace": "~0.4.0"
+  }
+}
