@@ -11,8 +11,11 @@
         plumber     = require('gulp-plumber'),
         rev         = require('gulp-rev'),
         revReplace  = require('gulp-rev-replace'),
-        rimraf      = require('rimraf');
-        
+        rimraf      = require('rimraf'),
+        pdf         = require('gulp-html-pdf'),
+        rename      = require('gulp-rename'),
+        remove      = require('gulp-html-remove');
+
 
     // Default task to be run with `gulp`
     gulp.task('default', ['views', 'styles', 'browser-sync'], function () {
@@ -43,11 +46,6 @@
 
     // Styles
     gulp.task('styles', function () {
-        //remove css files
-        rimraf('./*.css', function(){
-
-        });
-
         return gulp.src('app/main.scss')
             .pipe(sourceMaps.init())
             .pipe(plumber())
@@ -67,7 +65,7 @@
             .pipe(reload({stream:true}));
     });
 
-    gulp.task('dist', [ 'dist-styles', 'dist-views', 'revreplace'], function() {
+    gulp.task('dist', [ 'dist-styles', 'dist-views', 'to-pdf', 'revreplace'], function() {
         
     });
 
@@ -94,6 +92,17 @@
 
         return gulp.src('./index.html')
         .pipe(revReplace({manifest: manifest}))
+        .pipe(gulp.dest('./'));
+    });
+
+    gulp.task('to-pdf', function() {
+        rimraf('./*.pdf', function(){});
+        gulp.src('app/index.html')
+        .pipe(remove('#analytics'))
+        .pipe(remove('link'))
+        .pipe(remove('.pdf'))
+        .pipe(pdf())
+        .pipe(rename('jamieholliday.pdf'))
         .pipe(gulp.dest('./'));
     });
 
