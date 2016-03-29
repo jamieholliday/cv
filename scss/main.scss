@@ -11,7 +11,7 @@ textarea {
 }
 
 html{
- background: #F8F8F8; 
+ background: #F8F8F8;
 }
 
 body {
@@ -128,7 +128,7 @@ h3 {
 }
 
 a{
- color:#6EA0D6;  
+ color:#6EA0D6;
 }
 
 section{
@@ -138,14 +138,14 @@ section{
 }
 
 section:hover aside span{
- color:#6EA0D6; 
+ color:#6EA0D6;
  border-color:#6EA0D6;
 }
 
 aside{
  font-size:5em;
- color: #ccc;  
- float:left; 
+ color: #ccc;
+ float:left;
  width: 20%;
  padding:30px 0 30px 0;
 }
@@ -182,7 +182,7 @@ aside span{
 
 ul{
  padding:0;
- margin-top:0;   
+ margin-top:0;
 }
 
 li{
@@ -198,7 +198,7 @@ li{
 }
 
 .position{
-    border-bottom:1px dashed #ccc;   
+    border-bottom:1px dashed #ccc;
 }
 
 .position:last-child{
@@ -220,7 +220,7 @@ li{
         }
        .content{
            width:72%
-       } 
+       }
 
 }
 
@@ -228,7 +228,7 @@ li{
 /* ===============
     Small Width
    =============== */
-    
+
     aside{
         float:none;
         width:auto;
@@ -331,15 +331,15 @@ li{
     h1, h2 {
         page-break-after: avoid;
     }
-    
+
     aside{
         font-size:3em;
         width:28%;
     }
     .content{
         width:72%
-    } 
-    
+    }
+
     section aside span{
      border-color:#000 !important;
     }
