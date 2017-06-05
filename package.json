@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "parallelshell 'npm run sass' 'npm run browsersync'",
-    "deploy": "npm run sass-build && npm run pdf && npm run gh-pages",
+    "deploy": "npm run sass-build && npm run gh-pages",
     "sass": "node-sass --include-path scss scss/main.scss dist/main.css --watch",
     "sass-build": "node-sass --include-path scss scss/main.scss dist/main.css",
     "browsersync": "browser-sync start --server dist reload --files \"dist/*.css, dist/*.html\"",
