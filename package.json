@@ -1,21 +1,27 @@
 {
-  "name": "jamieholliday-cv",
-  "version": "0.0.4",
-  "devDependencies": {
-    "browser-sync": "^2.11.1",
-    "gh-pages": "^0.11.0",
-    "html-pdf": "^2.0.1",
-    "node-sass": "^3.4.2",
-    "parallelshell": "^2.0.0"
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "gatsby": "^1.9.158",
+    "gatsby-link": "^1.6.34",
+    "gatsby-plugin-google-analytics": "^1.0.15",
+    "gatsby-plugin-react-helmet": "^2.0.3",
+    "react-helmet": "^5.2.0"
   },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
   "scripts": {
-    "dev": "parallelshell 'npm run sass' 'npm run browsersync'",
-    "deploy": "npm run sass-build && npm run gh-pages",
-    "sass": "node-sass --include-path scss scss/main.scss dist/main.css --watch",
-    "sass-build": "node-sass --include-path scss scss/main.scss dist/main.css",
-    "browsersync": "browser-sync start --server dist reload --files \"dist/*.css, dist/*.html\"",
-    "gh-pages": "gh-pages -d dist",
-    "pdf": "node pdf.js"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {}
+  "devDependencies": {
+    "prettier": "^1.10.2"
+  }
 }
