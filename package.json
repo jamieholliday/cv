@@ -10,16 +10,17 @@
     "gatsby-plugin-react-helmet": "^2.0.3",
     "react-helmet": "^5.2.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gatsby develop",
+    "format":
+      "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pdf": "node pdf.js",
+    "gh-pages": "yarn pdf && yarn build && gh-pages -d public"
   },
   "devDependencies": {
     "prettier": "^1.10.2"
